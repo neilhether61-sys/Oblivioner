@@ -1,0 +1,6 @@
+{
+  "name": "Oblivion",
+  "description": "A mysterious digital release journal where you write your worries, regrets, and hidden thoughts into secret letters, starting a fictional dark countdown ritual to let them fade away forever.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

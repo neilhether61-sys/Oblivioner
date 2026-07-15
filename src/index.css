@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-mystery-dark: #050507;
+  --color-mystery-charcoal: #0c0c0f;
+  --color-mystery-gray: #141419;
+  --color-mystery-accent-purple: #4a1d6d;
+  --color-mystery-accent-red: #581c2d;
+  --color-mystery-glow-purple: rgba(139, 92, 246, 0.15);
+  --color-mystery-glow-red: rgba(239, 68, 68, 0.15);
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14141a;
+  border-radius: 9999px;
+  border: 1px solid #231c30;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b1d6d;
+}
+
+/* Base custom interactive states */
+body {
+  background-color: #050507;
+  color: #ececec;
+  font-family: var(--font-sans);
+}
+
+/* Animation helpers for special floating text elements */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.03);
+  }
+}
+
+.ambient-pulse {
+  animation: pulseGlow 8s infinite ease-in-out;
+}
+
+/* Slow swinging bell icon for completions */
+@keyframes swing {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(5deg); }
+  80% { transform: rotate(-5deg); }
+}
+
+.animate-swing {
+  animation: swing 2s ease-in-out infinite;
+  transform-origin: top center;
+}
+
